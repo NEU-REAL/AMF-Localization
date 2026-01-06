@@ -50,5 +50,5 @@ rosbag play YOUR_DATASET.bag --clock
 
 ## 5. Acknowledgments
 
-Thanks for [FAST-LIO2](https://github.com/hku-mars/FAST_LIO) and [LIVW-Localization](https://github.com/NEU-REAL/LIVW-Localization). 
+We would like to thank the authors of [FAST-LIO2](https://github.com/hku-mars/FAST_LIO), [ikd-Tree](https://github.com/hku-mars/ikd-Tree), and [LIVW-Localization](https://github.com/NEU-REAL/LIVW-Localization) for making their code publicly available, which has been very helpful for our research and implementation.
 
