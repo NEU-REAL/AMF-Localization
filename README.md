@@ -4,3 +4,49 @@ Real-Time and Adaptive Multisensor Fusion Localization Framework with Degradatio
 
 The repository is actively maintained and continues to be updated.
 
+## 1. Introduction
+
+Robust and accurate localization is a fundamental technology for the safe and efficient operation of intelligent vehicles and advanced driver-assistance systems. However, in complex and large-scale environments, conventional vehicle localization methods often suffer from heavy dependence on the global navigation satellite system (GNSS), low accuracy, and poor robustness in challenging environments, such as sensor degradation or highway scenarios.
+
+## 2. Prerequisited
+
+### 2.1 Ubuntu and ROS
+
+- Ubuntu 20.04
+- ROS-Noetic
+
+### 2.2 PCL && Eigen && OpenCV
+
+PCL >= 1.10.0,    Follow [PCL Installation](https://pointclouds.org/). 
+
+Eigen >= 3.3.7,      Follow [Eigen Installation](https://eigen.tuxfamily.org/index.php?title=Main_Page).
+
+## 3. Build
+
+Clone the repository and catkin_make:
+
+```
+cd ~/catkin_ws/src
+git clone https://github.com/NEU-REAL/AMF-Localization
+cd ~/catkin_ws
+catkin_make
+source ~/catkin_ws/devel/setup.bash
+```
+
+## 4. Run the package
+
+Please note that you should edit the `config/xxx.yaml` to adapt your dataset.
+
+### 4.1 Run on your dataset
+
+```
+roslaunch amf_localization localization_dataset.launch
+rosbag play YOUR_DATASET.bag --clock
+```
+
+
+
+## 5. Acknowledgments
+
+We would like to thank the authors of [FAST-LIO2](https://github.com/hku-mars/FAST_LIO), [ikd-Tree](https://github.com/hku-mars/ikd-Tree), and [LIVW-Localization](https://github.com/NEU-REAL/LIVW-Localization) for making their code publicly available, which has been very helpful for our research and implementation.
+
